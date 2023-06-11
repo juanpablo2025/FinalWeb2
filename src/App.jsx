@@ -4,10 +4,15 @@ import Empleados from "./Paginas/Empleados";
 import Productos from './Paginas/Productos';
 import Proveedores from './Paginas/Proveedores';
 import Boveda from './Paginas/Boveda';
+import Home from './Paginas/Home';
+import './App.css'
+
+
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1>Home</h1>
+    element: <Home/>
   },
   {
     path: '/Clientes',

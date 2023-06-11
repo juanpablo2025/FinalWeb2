@@ -20,7 +20,7 @@ const fetchPopular = async () => {
 
 
   return (
-    <div>
+    <div className="pelis">
 
 <h1>Peliculas</h1>
 <div className="popular-movies">

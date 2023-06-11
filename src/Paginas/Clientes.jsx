@@ -1,8 +1,12 @@
-import React from 'react'
-
+import Menu from "../Componentes/Menu.jsx"
+import Footer from '../Componentes/Footer.jsx'
 const Clientes = () => {
   return (
-    <div>Clientes</div>
+    <div>
+      <Menu/>
+      <p>Clientes</p>
+      <Footer/>
+      </div>
   )
 }
 

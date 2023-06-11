@@ -1,8 +1,13 @@
-import React from 'react'
+import Menu from "../Componentes/Menu.jsx"
+import Footer from '../Componentes/Footer.jsx'
 
 const Productos = () => {
   return (
-    <div>Productos</div>
+    <div>
+      <Menu/>
+      <p>Productos</p>
+      <Footer/>
+      </div>
   )
 }
 

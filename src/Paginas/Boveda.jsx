@@ -1,8 +1,13 @@
-import React from 'react'
+import Menu from "../Componentes/Menu.jsx"
+import Footer from '../Componentes/Footer.jsx'
 
 const Boveda = () => {
   return (
-    <div>Boveda</div>
+    <div>
+      <Menu/>
+      <p>Boveda</p>
+      <Footer/>
+      </div>
   )
 }
 

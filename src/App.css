@@ -8,14 +8,15 @@
 ul {
   display: flex;
   flex-direction: row;
+  list-style-type: none;
 }
 
 
 
 a {
   
-  margin:18px;
-  padding: 18px;
+ 
+  padding: 10px;
 }
 .Footer{
   background-color: black;

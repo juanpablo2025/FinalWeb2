@@ -19,7 +19,7 @@ const Clientes = () => {
   const agregarCliente = async () => {
    
     
-    const servicioCollection = collection(dataBase, "servicios");
+    const servicioCollection = collection(dataBase, "Clientes");
     const servicio = {
       nombre,
       documento,

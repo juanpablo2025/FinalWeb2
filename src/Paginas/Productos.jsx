@@ -18,7 +18,7 @@ const returnListado=useNavigate();
 const agregarProducto=async()=>{
 
 
-  const servicioCollection=collection(dataBase,"servicios");
+  const servicioCollection=collection(dataBase,"Productos");
   const servicio={
     nombre,
     cantidad,

@@ -1,8 +1,21 @@
 
 
 .Menu{
-  background-color: black;
-  color :white;
+  
+  
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+a {
+  
+  margin:18px;
+  padding: 18px;
 }
 .Footer{
   background-color: black;

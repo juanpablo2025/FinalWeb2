@@ -16,7 +16,7 @@ const Clientes = () => {
   /*imagen*/
   
   const returnListado = useNavigate();
-  const agrearCliente = async () => {
+  const agregarCliente = async () => {
    
     
     const servicioCollection = collection(dataBase, "servicios");
@@ -31,13 +31,14 @@ const Clientes = () => {
       
     };
     await addDoc(servicioCollection, servicio);
-    returnListado("/listar");
+    /*cambiar redireccion*/ 
+    returnListado("/clientes");
   };
   return (
     <div>
       <Menu/>
 
-      <h1>Registrar Cliente</h1>
+      <h1>Registrar cliente</h1>
       <section >
       <form className="formClientes">
         <input
@@ -78,7 +79,7 @@ const Clientes = () => {
         />
       
         <input
-          onClick={agrearCliente}
+          onClick={agregarCliente}
           type={"button"}
           value={"Agregar cliente"}
         />

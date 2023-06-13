@@ -31,10 +31,11 @@ img {
   margin-bottom: 1rem;
 }
 
-.formClientes{
-  align-items: center;
+form{
+ 
   display: flex;
   flex-direction: column;
- 
+  width: 50%;
+  align-content: center;
  
 }

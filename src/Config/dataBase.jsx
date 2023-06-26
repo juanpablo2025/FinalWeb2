@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore} from '@firebase/firestore'
+import { getFirestore } from "@firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import {v4} from 'uuid'
 const firebaseConfig = {
     apiKey: "AIzaSyA9Vb-O-tbSHYZ8tSSCcS1X6JDhxip2Ne4",
     authDomain: "crud-e0e99.firebaseapp.com",
@@ -10,3 +12,11 @@ const firebaseConfig = {
   };
 const app = initializeApp(firebaseConfig);
 export const dataBase = getFirestore(app)
+export const storage = getStorage(app)
+
+export const subirImagen = async (file) => {
+  const uploadImg = ref(storage, v4())
+  await uploadBytes(uploadImg, file)
+  const urlImg = await getDownloadURL(uploadImg)
+  return urlImg
+}

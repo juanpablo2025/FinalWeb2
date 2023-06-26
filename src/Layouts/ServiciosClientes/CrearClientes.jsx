@@ -1,21 +1,23 @@
 import { collection, addDoc } from "firebase/firestore";
-import { dataBase } from "../../config/dataBase";
+import { dataBase,subirImagen } from "../../config/dataBase";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CrearClientes = () => {
 
-    const [nombre, setNombre] = useState("");
+  const [nombre, setNombre] = useState("");
   const [documento, setDocumento] = useState("");
   const [correo, setCorreo] = useState("");
   const [telefono, setTelefono] = useState("");
   const [direccion, setDireccion] = useState("");
   const [barrio, setBarrio] = useState("");
   const [ciudad, setCiudad] = useState("");
-  /*imagen*/
+  const [img, setImg] = useState(null);
   
   const returnListado = useNavigate();
   const agregarCliente = async () => {
+    const ulrImg = await subirImagen(img)
+
    
     
     const servicioCollection = collection(dataBase, "Clientes");
@@ -26,7 +28,8 @@ const CrearClientes = () => {
       telefono,
       direccion,
       barrio,
-      ciudad
+      ciudad,
+      ulrImg
       
     };
     await addDoc(servicioCollection, servicio);
@@ -34,7 +37,7 @@ const CrearClientes = () => {
     returnListado("/Clientes");
   };
   return (
-    <div><h1>Registrar cliente</h1>
+    <div className="form">
     <section >
     <form className="formClientes">
       <input
@@ -73,6 +76,8 @@ const CrearClientes = () => {
         placeholder={"Ciudad"}
         type={"text"}
       />
+       <section>Imagen:
+    <input onChange={(e)=>setImg(e.target.files[0])} type="file" /></section>
     
       <input
         onClick={agregarCliente}

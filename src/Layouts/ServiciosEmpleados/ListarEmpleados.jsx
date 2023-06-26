@@ -1,23 +1,18 @@
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { dataBase } from "../../config/dataBase";
-
 import { Link } from "react-router-dom";
-
-
-const ListarClientes = () => {
-
-
+const ListarEmpleados = () => {
   const [servicios, setServicios] = useState([]);
 
   const mostrarServicios = async () => {
-    const serviciosCollection = collection(dataBase, "Clientes");
+    const serviciosCollection = collection(dataBase, "Empleados");
     const data = await getDocs(serviciosCollection);
     console.log(data.docs);
     setServicios(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
   const eliminarServicio = async (id) => {
-    const servicioEliminado = doc(dataBase, 'Clientes', id)
+    const servicioEliminado = doc(dataBase, 'Empleados', id)
     await deleteDoc(servicioEliminado)
     mostrarServicios()
   }
@@ -31,14 +26,14 @@ const ListarClientes = () => {
         <section key={servicio.id}>
           <table className="tabla">
             <tr>
-              <td>Img</td>
+              <td>Imagen</td>
               <td>Nombre</td>
               <td>Documento</td>
               <td>Correo</td>
-              <td>Telefono</td>
+              <td>Cargo</td>
+              <td>Salario</td>
               <td>Direccion</td>
-              <td>Barrio</td>
-              <td>Ciudad</td>
+              <td>Cuenta</td>
               <td> <button onClick={(() => { eliminarServicio(servicio.id) })}>Eliminar</button></td>
             </tr>
             <tr>
@@ -46,20 +41,17 @@ const ListarClientes = () => {
               <td>{servicio.nombre}</td>
               <td>{servicio.documento}</td>
               <td>{servicio.correo}</td>
-              <td>{servicio.telefono}</td>
+              <td>{servicio.cargo}</td>
+              <td>{servicio.salario}</td>
               <td>{servicio.direccion}</td>
-              <td>{servicio.barrio}</td>
-              <td>{servicio.ciudad}</td>
+              <td>{servicio.cuenta}</td>
               <td> <Link to={'/Admin' + servicio.id}>Editar</Link></td>
             </tr>
-
           </table>
-
-
-
         </section>
       ))}
     </section>
   )
 }
-export default ListarClientes;
+
+export default ListarEmpleados

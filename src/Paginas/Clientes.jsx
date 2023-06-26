@@ -1,15 +1,18 @@
-import CrearClientes from "../Layouts/ServiciosClientes/CrearClientes.jsx"
 
-import Menu from "../Componentes/Menu.jsx"
+
+
 import Footer from '../Componentes/Footer.jsx'
 import ListarClientes from "../Layouts/ServiciosClientes/ListarClientes.jsx"
+import MenuAdmin from "../Componentes/MenuAdmin.jsx"
+import CrearClientes from "../Layouts/ServiciosClientes/CrearClientes.jsx"
 const Clientes = () => {
   
   return (
     <div>
-      <Menu/>
+      <MenuAdmin/>
 
       <CrearClientes/>
+      <h1>Listado de Clientes</h1>
       <ListarClientes/>
       <Footer/>
       </div>

@@ -6,6 +6,8 @@ import Proveedores from './Paginas/Proveedores';
 import Boveda from './Paginas/Boveda';
 import Home from './Paginas/Home';
 import './App.css'
+import Admin from './Paginas/Admin';
+import Info from './Paginas/Info';
 
 
 
@@ -13,6 +15,14 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Home/>
+  },
+  {
+    path: '/Info',
+    element: <Info/>
+  },
+  {
+    path: '/Admin',
+    element: <Admin/>
   },
   {
     path: '/Clientes',

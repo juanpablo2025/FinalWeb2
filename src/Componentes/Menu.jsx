@@ -5,11 +5,10 @@ const Menu = () => {
     <section className='Menu'>
       <ul>
   <li><a href="/">Home</a></li>
-  <li><a href="/Clientes">Clientes</a></li>
-  <li><a href="/Productos">Productos</a></li>
-  <li><a href="/Empleados">Empleados</a></li>
-  <li><a href="/Proveedores">Proveedores</a></li>
-  <li><a href="/Boveda">Boveda</a></li>
+  <li><a href="/Info">Info</a></li>
+  
+  <li><a href="/Admin">Administrador</a></li>
+ 
 
 </ul>
     </section>

@@ -2,7 +2,9 @@
 
 const Footer = () => {
   return (
-    <div className='Footer'>Footer</div>
+    <div className='Footer'>
+      Copyright @ 2022 TimeToProgram.com All Right Reserved
+    </div>
   )
 }
 

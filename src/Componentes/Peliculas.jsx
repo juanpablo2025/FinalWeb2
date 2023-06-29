@@ -22,9 +22,7 @@ const fetchPopular = async () => {
   return (
     <div className="pelis">
 
-<section className="titulos">
-<h1>ULTIMOS ESTRENOS</h1>
-</section>
+
 
 <div className="popular-movies">
         {popular.map((movie) => {

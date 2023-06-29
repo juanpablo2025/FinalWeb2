@@ -36,50 +36,62 @@ const CrearClientes = () => {
     /*cambiar redireccion*/ 
     returnListado("/Clientes");
   };
+  /*  <section className="form-register">
+    <h4>Formulario Registro</h4>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+    <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+    <input class="botons" type="submit" value="Registrar">
+    <p><a href="#">¿Ya tengo Cuenta?</a></p>
+  </section>*/ 
   return (
-    <div className="form">
+    <div >
     <section >
-    <form className="formClientes">
-      <input
+    <form className="form-register">
+
+      <section className="titulo-registrate">REGISTRATE</section>
+      <input className="controls"
         onChange={(e) => setNombre(e.target.value)}
         placeholder={"Nombre "}
         type={"text"}
       />
-      <input
+      <input className="controls"
         onChange={(e) => setDocumento(e.target.value)}
         placeholder={"Documento "}
         type={"text"}
         max={'50'}
       />
-      <input
+      <input className="controls"
         onChange={(e) => setCorreo(e.target.value)}
         placeholder={"Correo"}
         type={"text"}
       />
-      <input
+      <input className="controls"
         onChange={(e) => setTelefono(e.target.value)}
         placeholder={"Telefono"}
         type={"text"}
       />
-      <input
+      <input className="controls"
         onChange={(e) => setDireccion(e.target.value)}
         placeholder={"Direccion"}
         type={"text"}
       />
-      <input
+      <input className="controls"
         onChange={(e) => setBarrio(e.target.value)}
         placeholder={"Barrio"}
         type={"text"}
       />
-      <input
+      <input className="controls"
         onChange={(e) => setCiudad(e.target.value)}
         placeholder={"Ciudad"}
         type={"text"}
       />
        <section>Imagen:
-    <input onChange={(e)=>setImg(e.target.files[0])} type="file" /></section>
+    <input className="botons" onChange={(e)=>setImg(e.target.files[0])} type="file" /></section>
     
-      <input
+      <input className="controls"
         onClick={agregarCliente}
         type={"button"}
         value={"Agregar cliente"}

@@ -22,7 +22,8 @@ const fetchPopular = async () => {
   return (
     <div className="pelis">
 
-<h1>Ultimos Estrenos</h1>
+
+
 <div className="popular-movies">
         {popular.map((movie) => {
           return <Movie key={movie.id} movie={movie} />;

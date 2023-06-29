@@ -32,39 +32,40 @@ const CrearBoveda = () => {
     
     
   return (
-    <div> <h1>Registrar Boveda</h1>
     <section>
-     <form className="formBovedas">
-       <input
+     <form className="form-register">
+     <section className="titulos-forms">REGISTRAR BOVEDA</section>
+
+       <input className="controls"
          onChange={(e) => setNombre(e.target.value)}
          placeholder={"Nombre"}
          type={"text"}
        />
-       <input
+       <input className="controls"
          onChange={(e) => setUrlWeb(e.target.value)}
          placeholder={"Url de Imagen"}
          type={"text"}
        />
-       <input
+       <input className="controls"
          onChange={(e) => setContrasena(e.target.value)}
          placeholder={"Contraseña"}
          type={"text"}
        />
-       <input
+       <input className="controls"
          onChange={(e) => setUsuario(e.target.value)}
          placeholder={"Usuario"}
          type={"text"}
        />
         <section>Imagen:
-    <input onChange={(e)=>setImg(e.target.files[0])} type="file" /></section>
-        <input
+    <input className="controls" onChange={(e)=>setImg(e.target.files[0])} type="file" /></section>
+        <input className="botons"
          onClick={agregarBoveda}
          type={"button"}
          value={"Agregar Bodeva"}
        />
        
      </form>
-    </section></div>
+    </section>
   )
 }
 

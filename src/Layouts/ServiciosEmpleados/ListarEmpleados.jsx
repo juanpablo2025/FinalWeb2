@@ -20,23 +20,36 @@ const ListarEmpleados = () => {
     mostrarServicios();
   }, []);
   console.log(servicios);
+
+  {/*
+            <section className="card-boveda">
+
+ {
+                servicios.map((servicio) => (
+                
+                  <section className="card" key={servicio.id}>
+                    <img className="img-card" src={servicio.ulrImg} />
+                    <p>{servicio.nombre}</p>
+                    <p>{servicio.urlWeb}</p>
+                    <p>{servicio.contrasena}</p>
+                    <p>{servicio.usuario}</p>
+                  </section>   
+                  ))
+};
+    
+             </section> 
+    
+  )
+           
+}
+*/ }
   return (
     <section>
       {servicios.map((servicio) => (
         <section key={servicio.id}>
-          <table className="tabla">
-            <tr>
-              <td>Imagen</td>
-              <td>Nombre</td>
-              <td>Documento</td>
-              <td>Correo</td>
-              <td>Cargo</td>
-              <td>Salario</td>
-              <td>Direccion</td>
-              <td>Cuenta</td>
-              <td> <button onClick={(() => { eliminarServicio(servicio.id) })}>Eliminar</button></td>
-            </tr>
-            <tr>
+          <section className="tabla-listar">
+            
+            <th>
               <td><img src={servicio.ulrImg} alt="" /></td>
               <td>{servicio.nombre}</td>
               <td>{servicio.documento}</td>
@@ -45,9 +58,11 @@ const ListarEmpleados = () => {
               <td>{servicio.salario}</td>
               <td>{servicio.direccion}</td>
               <td>{servicio.cuenta}</td>
+              <td> <button onClick={(() => { eliminarServicio(servicio.id) })}>Eliminar</button></td>
+              <td> <button onClick={(() => { eliminarServicio(servicio.id) })}>Eliminar</button></td>  
               <td> <Link to={'/Admin' + servicio.id}>Editar</Link></td>
-            </tr>
-          </table>
+            </th>  
+          </section>
         </section>
       ))}
     </section>

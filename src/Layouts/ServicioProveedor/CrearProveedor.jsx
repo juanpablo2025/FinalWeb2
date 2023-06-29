@@ -37,11 +37,12 @@ const CrearProveedor = () => {
     returnListado("/proveedores")
   };
   return (
-    <div><h1>Registrar Proveedores</h1>
+    
       
     <section>
-      <form className="formProveedores">
-      <input 
+      <form className="form-register">
+      <section className="titulos-forms">REGISTRAR PROVEEDORES</section>
+      <input className="controls"
       /* Para los proveedores es necesario almacenar
           nombre, dirección, ciudad, nit, teléfono 
           gerente, nombre gerente, imagen gerente 
@@ -51,43 +52,43 @@ const CrearProveedor = () => {
         placeholder={"Nombre "}
         type={"text"}
       />
-      <input
+      <input className="controls"
       onChange={(e) => setDireccion(e.target.value)}
       placeholder={"Direccion "}
       type={"text"}
       />
-      <input
+      <input className="controls"
       onChange={(e) => setCiudad(e.target.value)}
       placeholder={"Ciudad"}
       type={"text"}
       />
-      <input
+      <input className="controls"
       onChange={(e) => setNit(e.target.value)}
       placeholder={"Nit"}
       type={"text"}
       />
-      <input
+      <input className="controls"
       onChange={(e) => setTelefono(e.target.value)}
       placeholder={"Telefono"}
       type={"text"}
       />
-      <input
+      <input className="controls"
       onChange={(e) => setNombreGerente(e.target.value)}
       placeholder={"Nombre Gerente"}
       type={"text"}
       />
     <section>Imagen:
-    <input onChange={(e)=>setImg(e.target.files[0])} type="file" /></section>
+    <input className="controls" onChange={(e)=>setImg(e.target.files[0])} type="file" /></section>
     <section>Logo:
-    <input onChange={(e)=>setLogo(e.target.files[0])} type="file" /></section>
+    <input className="controls" onChange={(e)=>setLogo(e.target.files[0])} type="file" /></section>
       
-      <input
+      <input className="botons"
         onClick={agregarProveedor}
         type={"button"}
         value={"Agregar proveedor"}
       />
       </form>
-    </section></div>
+    </section>
   )
 }
 

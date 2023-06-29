@@ -1,9 +1,11 @@
 
 
-.Menu{
-  
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 ul {
   display: flex;
@@ -19,40 +21,29 @@ a {
   padding: 10px;
 }
 .Footer{
-  background-color: black;
-  color :white;
+  background-color: gold;
+  color :black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  margin-top: 50px;
 }
-.pelis {
-  margin: 5% 5%;
-  text-align: center;
-}
+
 
 .App {
   text-align: center;
 }
-.popular-movies {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-column-gap: 1rem;
-  grid-row-gap: 2rem;
-  text-align: center;
-}
-img {
-  width: 100%;
-  height: 25%;
-  object-fit: cover;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  border-color: #000;
-}
+
+
 
 form{
  
   display: flex;
+  
   flex-direction: column;
   width: 50%;
-  margin-right: auto;
-  margin-left: auto;
+  
   
  
 }
@@ -110,4 +101,246 @@ th, td {
    text-align: left;
    vertical-align: top;
    border: 1px solid #000;
+}
+/*menu.menu*/
+
+header h1
+{
+    color: #AAA;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+header span
+{
+    color: #222;
+}
+
+footer span
+{
+  color: #aaaaaa;
+  
+}
+
+nav.container
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 1em 1em;
+	text-align: center;
+}
+
+nav.container a
+{
+    color: black;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.teal
+{
+    background-color: gold;
+}
+nav.borderYtoX a:before, nav.borderYtoX a:after
+{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: #000000;
+    transition: all 0.3s;
+}
+nav.borderYtoX a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+nav.borderYtoX a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+nav.borderYtoX a:hover:before, nav.borderYtoX a:hover:after
+{
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
+/*titulos*/
+.titulos{
+ 
+ 
+  background-color: gold;
+  margin-top: 50px;
+ 
+}
+
+/*formulario*/
+.form-register {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  background: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+ 
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid  #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+.form-register p {
+  
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: gold;
+  border: none;
+  padding: 12px;
+  color: rgb(5, 5, 5);
+  margin: 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.form-register .botons:hover {
+  background-color:  #1f53c5 ;
+  color: white;
+    font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+.titulos-forms{
+  margin: 30px;
+  font-size: 350%;
+
+}
+
+
+
+
+/*peliculas*/
+.contenedor-peliculas{
+  margin: 10%;
+color: white;
+}
+.popular-movies{
+  background-color: transparent;
+  
+}
+.popular-movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  text-align: center;
+}
+
+.titulo-Movies{
+  color: white;
+
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 15px;
+
+}
+ .pelis{
+  margin: 5% 5%;
+  text-align: center;
+
+ }
+ img {
+  width: 100%;
+  height: 25%;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  border-color: #f3eded;
+}
+
+/*cards*/
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-wrap: wrap;
+  color: white;
+  
+
+  
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  border-color: gold;
+}
+
+
+
+
+
+.img-card{
+  border-radius: 50%;
+  width: 100px;
+
+}
+
+body{
+  background-image: url(https://img.freepik.com/foto-gratis/telon-fondo-textura-muro-hormigon-solido_53876-129493.jpg?w=740&t=st=1688057401~exp=1688058001~hmac=832cddd18c3aced4f8b7fd5c10a0da2ca12fdca32a88aac5412b2f58d796220c);
+}
+
+.titulob{
+  color: white;
 }

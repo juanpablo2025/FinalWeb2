@@ -21,8 +21,8 @@ a {
   padding: 10px;
 }
 .Footer{
-  background-color: black;
-  color :white;
+  background-color: gold;
+  color :black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,7 +178,8 @@ nav.borderYtoX a:hover:before, nav.borderYtoX a:hover:after
 /*titulos*/
 .titulos{
  
-  background-color: rgb(109, 109, 239);
+ 
+  background-color: gold;
   margin-top: 50px;
  
 }
@@ -210,7 +211,7 @@ nav.borderYtoX a:hover:before, nav.borderYtoX a:hover:after
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 16px;
-  border: 1px solid #1f53c5;
+  border: 1px solid  #1f53c5;
   font-family: 'calibri';
   font-size: 18px;
   color: white;
@@ -257,7 +258,7 @@ nav.borderYtoX a:hover:before, nav.borderYtoX a:hover:after
 .titulos-forms{
   margin: 30px;
   font-size: 350%;
-  
+
 }
 
 
@@ -266,9 +267,10 @@ nav.borderYtoX a:hover:before, nav.borderYtoX a:hover:after
 /*peliculas*/
 .contenedor-peliculas{
   margin: 10%;
+color: white;
 }
 .popular-movies{
-  background-color: #848fa8;
+  background-color: transparent;
   
 }
 .popular-movies {
@@ -280,6 +282,7 @@ nav.borderYtoX a:hover:before, nav.borderYtoX a:hover:after
 }
 
 .titulo-Movies{
+  color: white;
 
   text-transform: uppercase;
   font-weight: 600;
@@ -297,9 +300,47 @@ nav.borderYtoX a:hover:before, nav.borderYtoX a:hover:after
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  border-color: #000;
+  border-color: #f3eded;
 }
 
-/*PRODUCTOS*/
+/*cards*/
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-wrap: wrap;
+  color: white;
+  
+
+  
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  border-color: gold;
+}
 
 
+
+
+
+.img-card{
+  border-radius: 50%;
+  width: 100px;
+
+}
+
+body{
+  background-image: url(https://img.freepik.com/foto-gratis/telon-fondo-textura-muro-hormigon-solido_53876-129493.jpg?w=740&t=st=1688057401~exp=1688058001~hmac=832cddd18c3aced4f8b7fd5c10a0da2ca12fdca32a88aac5412b2f58d796220c);
+}
+
+.titulob{
+  color: white;
+}

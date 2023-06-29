@@ -5,7 +5,7 @@ import CrearClientes from "../Layouts/ServiciosClientes/CrearClientes.jsx";
 
 const Home = () => {
   return (
-    <div>
+    <section className="body">
       <Menu />
       <section className="titulos">
         <h1>ULTIMOS ESTRENOS</h1>
@@ -17,7 +17,7 @@ const Home = () => {
       </section>
 
       <Footer />
-    </div>
+    </section>
   );
 };
 

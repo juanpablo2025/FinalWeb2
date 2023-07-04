@@ -23,25 +23,27 @@ const ListarBoveda = () => {
   console.log(servicios);
   return (
     <section>
-      {servicios.map((servicio) => (
-        <section key={servicio.id}>
-          <table className="tabla">
+      <table className="tabla">
             <tr>
               <td>Imagen</td>
               <td>Nombre</td>
               <td>URL</td>
               <td>Contraseña</td>
               <td>Usuario</td>
-              <td> <button onClick={(() => { eliminarServicio(servicio.id) })}>Eliminar</button></td>
+              <td>Botones</td>
             </tr>
+            </table>
+      {servicios.map((servicio) => (
+        <section key={servicio.id}>
+          <table className="tabla">
+            
             <tr>
-              <td><img src={servicio.ulrImg} alt="" /></td>
+              <td><img className="img-card" src={servicio.ulrImg} alt="" /></td>
               <td>{servicio.nombre}</td>
               <td>{servicio.urlWeb}</td>
               <td>{servicio.contrasena}</td>
               <td>{servicio.usuario}</td>
-              <td> <Link to={'/Admin' + servicio.id}>Editar</Link></td>
-            </tr>
+              <td> <button className="botonesEliminar" onClick={(() => { eliminarServicio(servicio.id) })}>Quitar</button><button className="botonesEditar"><Link style={{color: 'white',textDecoration: 'none'}} to={'/editarBovedas/' + servicio.id}>Editar</Link></button></td>               </tr>
           </table>
         </section>
       ))}

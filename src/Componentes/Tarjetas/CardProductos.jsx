@@ -24,11 +24,11 @@ const CardProductos = () => {
 
             <section className="card">
             <img className="img-card" src={servicio.ulrImg} />
-              <p>{servicio.nombre}</p>
-              <p>{servicio.cantidad}</p>
-              <p>{servicio.valor}</p>
-              <p>{servicio.descripcion}</p>
-              <p>{servicio.categoria}</p>
+              <p>Nombre:{servicio.nombre}</p>
+              <p>Cantidad:{servicio.cantidad}</p>
+              <p>Valor:{servicio.valor}</p>
+              <p>Descripcion:{servicio.descripcion}</p>
+              <p>Categoria:{servicio.categoria}</p>
             </section>
           </section>
         </section>

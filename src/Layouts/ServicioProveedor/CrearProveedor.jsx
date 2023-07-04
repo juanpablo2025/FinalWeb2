@@ -1,7 +1,7 @@
 import { collection, addDoc } from "firebase/firestore";
 import { dataBase, subirImagen } from "../../config/dataBase";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 const CrearProveedor = () => {
 
@@ -15,7 +15,7 @@ const CrearProveedor = () => {
   const [logo, setLogo] = useState(null);
   
 
-  const returnListado = useNavigate();
+ 
   const agregarProveedor = async()=>{
     const ulrImg = await subirImagen(img)
     const ulrLogo = await subirImagen(logo)
@@ -34,7 +34,7 @@ const CrearProveedor = () => {
       ulrLogo
     };
     await addDoc(servicioCollection,servicio);
-    returnListado("/proveedores")
+    window.location.reload()
   };
   return (
     
@@ -77,9 +77,9 @@ const CrearProveedor = () => {
       placeholder={"Nombre Gerente"}
       type={"text"}
       />
-    <section>Imagen:
+    <section><p>Imagen:</p>
     <input className="controls" onChange={(e)=>setImg(e.target.files[0])} type="file" /></section>
-    <section>Logo:
+    <section><p>Logo:</p>
     <input className="controls" onChange={(e)=>setLogo(e.target.files[0])} type="file" /></section>
       
       <input className="botons"

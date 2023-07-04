@@ -3,12 +3,17 @@ import Footer from "../Componentes/Footer.jsx";
 import Peliculas from "../Componentes/Peliculas.jsx";
 import CrearClientes from "../Layouts/ServiciosClientes/CrearClientes.jsx";
 
+
 const Home = () => {
   return (
     <section className="body">
       <Menu />
-      <section className="titulos">
-        <h1>ULTIMOS ESTRENOS</h1>
+
+      <section className="banner" >
+			
+			</section>
+      
+      <section className="titulos">ULTIMOS ESTRENOS<section/>
       </section>
       <Peliculas />
 

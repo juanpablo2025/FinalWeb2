@@ -45,12 +45,41 @@ const ListarEmpleados = () => {
 */ }
   return (
     <section>
+      <table className="tabla">
+
+
+
+  
+          <tr>
+            <td>Imagen</td>
+            <td>Nombre</td>
+            <td>Documento</td>
+
+            <td>correo</td>
+
+            <td>Cargo</td>
+            <td>Salario</td>
+            <td>Direccion</td>
+            <td>Cuenta</td>
+
+            <td>Botones</td>
+
+
+          </tr>
+        
+      </table>
       {servicios.map((servicio) => (
         <section key={servicio.id}>
-          <section className="tabla-listar">
-            
-            <th>
-              <td><img src={servicio.ulrImg} alt="" /></td>
+          <table className="tabla">
+
+
+
+            <tr>
+
+
+
+
+              <td><img className="img-card" src={servicio.ulrImg} alt="" /></td>
               <td>{servicio.nombre}</td>
               <td>{servicio.documento}</td>
               <td>{servicio.correo}</td>
@@ -58,11 +87,9 @@ const ListarEmpleados = () => {
               <td>{servicio.salario}</td>
               <td>{servicio.direccion}</td>
               <td>{servicio.cuenta}</td>
-              <td> <button onClick={(() => { eliminarServicio(servicio.id) })}>Eliminar</button></td>
-              <td> <button onClick={(() => { eliminarServicio(servicio.id) })}>Eliminar</button></td>  
-              <td> <Link to={'/Admin' + servicio.id}>Editar</Link></td>
-            </th>  
-          </section>
+             
+              <td> <button className="botonesEliminar" onClick={(() => { eliminarServicio(servicio.id) })}>Quitar</button><button className="botonesEditar"><Link style={{color: 'white',textDecoration: 'none'}} to={'/editarEmpleados/' + servicio.id}>Editar</Link></button></td>            </tr>
+          </table>
         </section>
       ))}
     </section>

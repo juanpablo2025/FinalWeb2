@@ -13,7 +13,7 @@ const Productos = () => {
     <div>
       <MenuAdmin/>
       <CrearProductos/>
-      <h1>Listado de Productos</h1>
+      <section className="titulos">Listado de Productos</section>
       <ListarProductos/>
       <Footer/>
       </div>

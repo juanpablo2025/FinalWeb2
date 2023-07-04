@@ -1,7 +1,7 @@
 import { collection, addDoc } from "firebase/firestore";
 import { dataBase, subirImagen } from "../../config/dataBase";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 const CrearBoveda = () => {
     const [nombre,setNombre]=useState("");
@@ -11,7 +11,7 @@ const CrearBoveda = () => {
     const [img, setImg] = useState(null);
     
     
-    const returnListado =useNavigate();
+   
 
     const agregarBoveda= async()=>{
 
@@ -26,7 +26,7 @@ const CrearBoveda = () => {
         };
     
         await addDoc(servicioCollection,servicio);
-        returnListado("/Boveda");
+        window.location.reload()
          
       };
     
@@ -56,7 +56,7 @@ const CrearBoveda = () => {
          placeholder={"Usuario"}
          type={"text"}
        />
-        <section>Imagen:
+        <section><p>Imagen:</p>
     <input className="controls" onChange={(e)=>setImg(e.target.files[0])} type="file" /></section>
         <input className="botons"
          onClick={agregarBoveda}

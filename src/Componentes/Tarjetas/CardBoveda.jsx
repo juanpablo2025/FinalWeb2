@@ -26,13 +26,13 @@ const CardBoveda = () => {
                 
                   <section className="card" key={servicio.id}>
                     <img className="img-card" src={servicio.ulrImg} />
-                    <p>{servicio.nombre}</p>
-                    <p>{servicio.urlWeb}</p>
-                    <p>{servicio.contrasena}</p>
-                    <p>{servicio.usuario}</p>
+                    <p>nombre: {servicio.nombre}</p>
+                    <p>UrlWeb: {servicio.urlWeb}</p>
+                    <p>Contraseña: {servicio.contrasena}</p>
+                    <p>Usuario: {servicio.usuario}</p>
                   </section>   
                   ))
-};
+}
     
              </section> 
     

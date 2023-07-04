@@ -24,46 +24,49 @@ const ListarProveedor = () => {
   console.log(servicios);
   return (
     <section>
-    {servicios.map((servicio) => (
-      <section key={servicio.id}>   
-         <table className="tabla">
+      <table className="tabla">
+        <tr>
+          <td>Imagen</td>
+          <td>Nombre</td>
 
-<tr>
-<td>Imagen</td>
-  <td>Nombre</td>
+          <td>Direccion</td>
 
-  <td>Direccion</td>
+          <td>Ciudad</td>
+          <td>Nit</td>
+          <td>Telefono</td>
+          <td>Gerente</td>
 
-  <td>Ciudad</td>
-  <td>Nit</td>
-  <td>Telefono</td>
-  <td>Gerente</td>
- 
-  <td> <button onClick={(()=>{eliminarServicio(servicio.id)})}>Eliminar</button></td>
+          <td>Botones</td>
 
 
-</tr>
+        </tr>
 
-<tr>
-<td><img src={servicio.ulrImg} alt="" /></td>
+      </table>
+      {servicios.map((servicio) => (
+        <section key={servicio.id}>
+          <table className="tabla">
 
-  <td>{servicio.nombre}</td>
 
-  <td>{servicio.direccion}</td>
 
-  <td>{servicio.ciudad}</td>
-  <td>{servicio.nit}</td>
-  <td>{servicio.telefono}</td>
-  <td>{servicio.nombreGerente}</td>
-  <td> <Link to={'/Admin'+servicio.id}>Editar</Link></td>
-  
+            <tr>
+              <td><img className="img-card" src={servicio.ulrImg} alt="" /></td>
 
-</tr>
+              <td>{servicio.nombre}</td>
 
-</table>
-      </section>
-    ))}
-  </section>
+              <td>{servicio.direccion}</td>
+
+              <td>{servicio.ciudad}</td>
+              <td>{servicio.nit}</td>
+              <td>{servicio.telefono}</td>
+              <td>{servicio.nombreGerente}</td>
+              <td> <button className="botonesEliminar" onClick={(() => { eliminarServicio(servicio.id) })}>Quitar</button><button className="botonesEditar"><Link style={{color: 'white',textDecoration: 'none'}} to={'/editarProveedores/' + servicio.id}>Editar</Link></button></td>   
+
+            </tr>
+
+          </table>
+        </section>
+      ))}
+    </section>
   )
 }
 

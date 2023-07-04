@@ -6,14 +6,15 @@ import CardProveedores from "../Componentes/Tarjetas/cardProveedores"
 
 const Info = () => {
   return (
-    <div className="Info"><Menu/>
-    <h1>Nuestros Productos</h1>
+    <div className="Info">
+    <Menu/>
+    <section className="titulos">Nuestros productos</section>
     <CardProductos/>
-    <h1>Nuestros empleados</h1>
+    <section className="titulos">Nuestros empleados</section>
     <CardEmpleados/>
-    <h1>Nuestros Proveedores</h1>
+    <section className="titulos">Nuestros proveedores</section>
     <CardProveedores/>
-    <h1>Nuestros Clientes</h1>
+    <section className="titulos">Nuestros clientes</section>
     <CardCliente/>
     </div>
   )

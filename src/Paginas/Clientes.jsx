@@ -12,7 +12,7 @@ const Clientes = () => {
       <MenuAdmin/>
 
       <CrearClientes/>
-      <h1>Listado de Clientes</h1>
+      <section className="titulos">Listado de Clientes</section>
       <ListarClientes/>
       <Footer/>
       </div>

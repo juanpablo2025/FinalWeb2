@@ -1,7 +1,7 @@
 import { collection, addDoc } from "firebase/firestore";
 import { dataBase, subirImagen } from "../../config/dataBase";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 const CrearEmpleados = () => {
 
@@ -12,10 +12,10 @@ const CrearEmpleados = () => {
   const [salario, setSalario] = useState("");
   const [direccion, setDireccion] = useState("");
   const [cuenta, setCuenta] = useState("");
-  /*imagen del empleado*/
+  
   const [img, setImg] = useState(null);
 
-  const returnListado = useNavigate();
+ 
   const agregarEmpleado = async () => {
     const ulrImg = await subirImagen(img)
 
@@ -32,7 +32,7 @@ const CrearEmpleados = () => {
 
     };
     await addDoc(servicioCollection, servicio);
-    returnListado("/empleados")
+    window.location.reload()
 
   }
   return (
@@ -77,7 +77,7 @@ const CrearEmpleados = () => {
             type={"text"}
           />
 
-          <section>Imagen:
+          <section><p>Imagen:</p>
             <input className="controls" onChange={(e) => setImg(e.target.files[0])} type="file" /></section>
 
           <input className="botons"

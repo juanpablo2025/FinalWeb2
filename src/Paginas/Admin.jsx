@@ -9,7 +9,7 @@ const Admin = () => {
 
     <div>
         <MenuAdmin/>
-        <h1>Boveda de Contraseñas</h1>
+        <section className="titulos">Boveda de Contraseñas</section>
         <CardBoveda/>
          </div>
   )

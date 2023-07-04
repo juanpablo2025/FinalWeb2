@@ -18,7 +18,7 @@ const Empleados = () => {
 
     <div> <MenuAdmin/>
     <CrearEmpleados />
-    <h1>Listado de Empleado</h1>
+    <section className="titulos">Listado de Empleado</section>
     <ListarEmpleados />
     <Footer /></div>
   )

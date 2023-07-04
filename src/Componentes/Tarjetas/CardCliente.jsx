@@ -27,13 +27,13 @@ const CardCliente = () => {
 
             <section className="card">
             <img className="img-card" src={servicio.ulrImg} alt="" />
-              <p>{servicio.nombre}</p>
-              <p>{servicio.documento}</p>
-              <p>{servicio.correo}</p>
-              <p>{servicio.telefono}</p>
-              <p>{servicio.direccion}</p>
-              <p>{servicio.barrio}</p>
-              <p>{servicio.ciudad}</p>
+              <p>Nombre: {servicio.nombre}</p>
+              <p>Documento: {servicio.documento}</p>
+              <p>Correo:{servicio.correo}</p>
+              <p>Telefono:{servicio.telefono}</p>
+              <p>Direccion:{servicio.direccion}</p>
+              <p>Barrio:{servicio.barrio}</p>
+              <p>Ciudad:{servicio.ciudad}</p>
 
             </section>
            

@@ -17,7 +17,7 @@ const Proveedores = () => {
     <div>
       <MenuAdmin/>
       <CrearProveedor/>
-      <h1>Listado de proveedores</h1>
+      <section className="titulos">Listado de proveedores</section>
       <ListarProveedor/>
       <Footer/>
       </div>

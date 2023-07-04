@@ -1,7 +1,7 @@
 import { collection, addDoc } from "firebase/firestore";
 import { dataBase, subirImagen } from "../../config/dataBase";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 const CrearClientes = () => {
 
@@ -14,7 +14,7 @@ const CrearClientes = () => {
   const [ciudad, setCiudad] = useState("");
   const [img, setImg] = useState(null);
 
-  const returnListado = useNavigate();
+
   const agregarCliente = async () => {
     const ulrImg = await subirImagen(img)
 
@@ -34,7 +34,7 @@ const CrearClientes = () => {
     };
     await addDoc(servicioCollection, servicio);
     /*cambiar redireccion*/
-    returnListado("/Clientes");
+    window.location.reload()
   };
 
   return (
@@ -79,7 +79,7 @@ const CrearClientes = () => {
             placeholder={"Ciudad"}
             type={"text"}
           />
-          <section>Imagen:
+          <section><p>Imagen:</p>
             <input className="controls" onChange={(e) => setImg(e.target.files[0])} type="file" /></section>
 
           <input className="botons"

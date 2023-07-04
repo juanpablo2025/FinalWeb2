@@ -21,7 +21,7 @@ const Boveda = () => {
     <div>
       <MenuAdmin/>
     <CrearBoveda/>
-    <section className="titulo-b">Listado de Contraseña</section>
+    <section className="titulos">Listado de Contraseñas</section>
     <ListarBoveda/>
      <Footer/>
       </div>

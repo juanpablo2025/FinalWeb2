@@ -17,21 +17,22 @@ const CardEmpleados = () => {
   }, []);
   console.log(servicios);
   return (
-    <section className="cards">
+    <section className="contenido">
       {servicios.map((servicio) => (
         <section key={servicio.id}>
-
+<section className="cards">
 
           <section className="card">
               <img className="img-card" src={servicio.ulrImg} />
-              <p>{servicio.nombre}</p>
-              <p>{servicio.documento}</p>
-              <p>{servicio.correo}</p>
-              <p>{servicio.cargo}</p>
-              <p>{servicio.salario}</p>
-              <p>{servicio.direccion}</p>
-              <p>{servicio.cuenta}</p>
+              <p>Nombre:    {servicio.nombre}</p>
+              <p>Documento: {servicio.documento}</p>
+              <p>Correo:    {servicio.correo}</p>
+              <p>Cargo:     {servicio.cargo}</p>
+              <p>Salario:   {servicio.salario}</p>
+              <p>Direccion: {servicio.direccion}</p>
+              <p>Cuenta:    {servicio.cuenta}</p>
           </section>
+        </section>
         </section>
       ))}
     </section>

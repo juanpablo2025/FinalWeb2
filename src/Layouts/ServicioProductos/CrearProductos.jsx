@@ -1,6 +1,6 @@
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc} from "firebase/firestore";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { dataBase, subirImagen } from "../../config/dataBase";
 
 
@@ -11,11 +11,14 @@ const CrearProductos = () => {
   const [descripcion, setDescripcion] = useState("");
   const [img, setImg] = useState(null);
   const [categoria, setCategoria] = useState("");
+  
 
-  const returnListado = useNavigate();
+
   const agregarProducto = async () => {
     const ulrImg = await subirImagen(img)
 
+
+    
 
     const servicioCollection = collection(dataBase, "Productos");
     const servicio = {
@@ -28,7 +31,7 @@ const CrearProductos = () => {
 
     };
     await addDoc(servicioCollection, servicio);
-    returnListado("/Productos")/*cambiar redireccion*/
+    window.location.reload()
   }
   return (
       
@@ -62,7 +65,7 @@ const CrearProductos = () => {
             placeholder={"Categoria"}
             type={"text"}
           />
-          <section>Imagen:
+          <section><p>Imagen:</p>
             <input className="controls" onChange={(e) => setImg(e.target.files[0])} type="file" /></section>
           <input className="botons"
             onClick={agregarProducto}

@@ -2,6 +2,7 @@ const MenuAdmin = () => {
   return (
     <section className="Menu">
       <nav className="container teal borderYtoX">
+      <section className="brand"><a href="/">CineExpertos</a></section>
         <a href="/Admin">HOME</a>
         <a href="/Clientes">Clientes</a>
         <a href="/Productos">Productos</a>
